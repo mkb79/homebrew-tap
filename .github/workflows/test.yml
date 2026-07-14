@@ -28,10 +28,10 @@ jobs:
         # arm64 and the x86_64 archives each get exercised.
         os: [macos-14, ubuntu-latest]
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
 
       - name: Set up Homebrew
-        uses: Homebrew/actions/setup-homebrew@master
+        uses: Homebrew/actions/setup-homebrew@18fcb8e3e06b4247c676c506750dc95ea7226479 # master
 
       # `brew install` from a local path is refused — a formula must live in a
       # tap — so register this checkout as the tap it actually is.

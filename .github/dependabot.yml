@@ -6,3 +6,8 @@ updates:
     directory: /
     schedule:
       interval: monthly
+    # The actions are pinned by commit, so Dependabot is the only thing that
+    # will ever move them again.
+    commit-message:
+      prefix: ci
+      include: scope
