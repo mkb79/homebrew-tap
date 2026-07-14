@@ -1,0 +1,8 @@
+version: 2
+updates:
+  # The formula pins no dependencies, but the workflow does — a pinned action
+  # that is never updated is the one that goes stale unnoticed.
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
