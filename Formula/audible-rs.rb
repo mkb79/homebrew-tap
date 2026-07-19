@@ -12,12 +12,12 @@ class AudibleRs < Formula
   # SQLite for no gain.
   on_macos do
     on_arm do
-      url "https://github.com/mkb79/audible-rs/releases/download/v0.1.0-alpha.7/audible-0.1.0-alpha.7-aarch64-apple-darwin.tar.gz"
-      sha256 "0127d38bd2a6a038bd51a0ef37a24df8af68afb07b1545630b52e7ca69ce5512"
+      url "https://github.com/mkb79/audible-rs/releases/download/v0.1.0-alpha.8/audible-0.1.0-alpha.8-aarch64-apple-darwin.tar.gz"
+      sha256 "24a74d5e2162c34783b29f6fce856efde72cc9e13581d6c3179543610b2a8556"
     end
     on_intel do
-      url "https://github.com/mkb79/audible-rs/releases/download/v0.1.0-alpha.7/audible-0.1.0-alpha.7-x86_64-apple-darwin.tar.gz"
-      sha256 "545f99766aa821c1aa4ac9fc5b77463ee8445b652dd7503d941fa7cc5460bb1a"
+      url "https://github.com/mkb79/audible-rs/releases/download/v0.1.0-alpha.8/audible-0.1.0-alpha.8-x86_64-apple-darwin.tar.gz"
+      sha256 "8db8c21ecb178f4a4108676c3bd315c94a3e24c6d7da3594349d798df2b3af49"
     end
   end
 
@@ -25,12 +25,12 @@ class AudibleRs < Formula
   # depend on the host's glibc.
   on_linux do
     on_arm do
-      url "https://github.com/mkb79/audible-rs/releases/download/v0.1.0-alpha.7/audible-0.1.0-alpha.7-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "9d32e3cd866a49493d1832d05730b0a0c874137c709cc5e61e85e3cc3f12c04d"
+      url "https://github.com/mkb79/audible-rs/releases/download/v0.1.0-alpha.8/audible-0.1.0-alpha.8-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "5d69fa55edbd93e858dee8b93c6baee07d4982c13bf952caf8bc891d0b5660b3"
     end
     on_intel do
-      url "https://github.com/mkb79/audible-rs/releases/download/v0.1.0-alpha.7/audible-0.1.0-alpha.7-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "99bc77a177d59ef38077a2459cd3dc720d359a488383ddbb540772fefb1e1502"
+      url "https://github.com/mkb79/audible-rs/releases/download/v0.1.0-alpha.8/audible-0.1.0-alpha.8-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "10a77a4fa39bf49762b47e53fcc52e78a47cf154eb30f65c7e3ea8d860872c1c"
     end
   end
 
@@ -45,7 +45,7 @@ class AudibleRs < Formula
 
   test do
     # Exact, not a substring: a release binary reports a bare version. One
-    # built from source appends its commit (`0.1.0-alpha.7+g1a2b3c4`), which
+    # built from source appends its commit (`0.1.0-alpha.8+g1a2b3c4`), which
     # would mean the release pipeline shipped the wrong thing.
     assert_equal "audible #{version}", shell_output("#{bin}/audible --version").strip
 
